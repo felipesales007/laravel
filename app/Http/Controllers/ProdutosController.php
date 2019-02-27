@@ -45,4 +45,35 @@ class ProdutosController extends Controller
             return redirect('produtos/create')->with('success', 'Produto cadastrado com sucesso');
         }
     }
+
+    public function edit($id) {
+        $produto = Produtos::find($id);
+        return view('produtos.edit', compact('produto', 'id'));
+    }
+
+    public function update(Request $request, $id) {
+        $produto = Produtos::find($id);
+
+        $this->validate($request,[
+            'sku' => 'required | min:3',
+            'titulo' => 'required | min:3',
+            'descricao' => 'required | min:10',
+            'preco' => 'required | numeric'
+        ]);
+
+        if($request->hasFile('imgproduto')) {
+            $imagem = $request->file('imgproduto');
+            $nomearquivo = md5($id).".".$imagem->getClientOriginalExtension();
+            $request->file('imgproduto')->move(public_path('./img/produtos/'), $nomearquivo);
+        }
+
+        $produto->sku = $request->get('sku');
+        $produto->titulo = $request->get('titulo');
+        $produto->descricao = $request->get('descricao');
+        $produto->preco = $request->get('preco');
+
+        if($produto->save()) {
+            return redirect('produtos/'.$id.'/edit')->with('success', 'Produto atualizado com sucesso');
+        }
+    }
 }
