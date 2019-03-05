@@ -12,7 +12,7 @@ class ProdutosController extends Controller
         // echo "<pre>";
         // print_r($produtos);
         // echo "</pre>";
-        return view('produtos.index', array('produtos' => $produtos));
+        return view('produtos.index', array('produtos' => $produtos, 'buscar' => null));
     }
 
     public function show($id) {
@@ -84,5 +84,15 @@ class ProdutosController extends Controller
         }
         $produto->delete();
         return redirect()->back()->with('info', 'Produto deletado com sucesso');
+    }
+
+    public function busca(Request $request) {
+        $buscaInput = $request->input('busca');
+        
+        $produtos = Produtos::where('titulo', 'LIKE', '%'.$buscaInput.'%')
+        ->orwhere('descricao', 'LIKE', '%'.$buscaInput.'%')
+        ->get();
+
+        return view('produtos.index', array('produtos' => $produtos, 'buscar' => $buscaInput));
     }
 }
