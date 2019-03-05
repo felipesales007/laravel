@@ -2,6 +2,11 @@
 @section('title', 'Lista de Produtos')
 @section('content')
     <h1>Produtos</h1>
+    @if($message = Session::get('info'))
+        <div class="alert alert-info">
+            {{$message}}
+        </div>
+    @endif
     <div class="row">
         @foreach ($produtos as $produto)
         <div class="col-md-3">
@@ -12,7 +17,12 @@
                 <a href="{{URL::to('produtos')}}/{{$produto->id}}">{{$produto->titulo}}</a>
             </h4>
             <div class="mb-3">
-                <a href="{{URL::to('produtos/'.$produto->id.'/edit')}}" class="btn btn-primary">Editar</a>
+                <form method="POST" action="{{action('ProdutosController@destroy', $produto->id)}}">
+                    @csrf
+                    <input type="hidden" name="_method" value="DELETE">
+                    <a href="{{URL::to('produtos/'.$produto->id.'/edit')}}" class="btn btn-primary">Editar</a>
+                    <button class="btn btn-danger">Excluir</button>
+                </form>
             </div>
         </div>
         @endforeach
