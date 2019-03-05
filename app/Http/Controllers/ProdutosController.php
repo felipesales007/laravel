@@ -8,7 +8,8 @@ use App\Produtos;
 class ProdutosController extends Controller
 {
     public function index() {
-        $produtos = Produtos::all();
+        $produtos = Produtos::paginate(4);
+        //$produtos = Produtos::all();
         // echo "<pre>";
         // print_r($produtos);
         // echo "</pre>";
@@ -91,7 +92,8 @@ class ProdutosController extends Controller
         
         $produtos = Produtos::where('titulo', 'LIKE', '%'.$buscaInput.'%')
         ->orwhere('descricao', 'LIKE', '%'.$buscaInput.'%')
-        ->get();
+        ->paginate(4);
+        //->get();
 
         return view('produtos.index', array('produtos' => $produtos, 'buscar' => $buscaInput));
     }
