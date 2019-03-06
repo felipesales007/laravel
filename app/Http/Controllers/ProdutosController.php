@@ -14,7 +14,7 @@ class ProdutosController extends Controller
         // echo "<pre>";
         // print_r($produtos);
         // echo "</pre>";
-        return view('produtos.index', array('produtos' => $produtos, 'buscar' => null));
+        return view('produtos.index', array('produtos' => $produtos, 'buscar' => null, 'ordem'=> null));
     }
 
     public function show($id) {
@@ -104,6 +104,28 @@ class ProdutosController extends Controller
         ->paginate(4);
         //->get();
 
-        return view('produtos.index', array('produtos' => $produtos, 'buscar' => $buscaInput));
+        return view('produtos.index', array('produtos' => $produtos, 'buscar' => $buscaInput, 'ordem'=> null));
+    }
+
+    public function ordem(Request $request) {
+        $ordemInput = $request->input('ordem');
+
+        if ($ordemInput == 1) {
+            $campo = 'titulo';
+            $tipo = 'asc';
+        } else if ($ordemInput == 2) {
+            $campo = 'titulo';
+            $tipo = 'desc';
+        } else if ($ordemInput == 3) {
+            $campo = 'preco';
+            $tipo = 'desc';
+        } else if ($ordemInput == 4) {
+            $campo = 'preco';
+            $tipo = 'asc';
+        }
+        
+        $produtos = Produtos::orderBy($campo, $tipo)->paginate(4);
+
+        return view('produtos.index', array('produtos' => $produtos, 'buscar' => null, 'ordem'=> $ordemInput));
     }
 }
