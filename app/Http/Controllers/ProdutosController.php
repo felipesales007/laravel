@@ -33,7 +33,8 @@ class ProdutosController extends Controller
     }
 
     public function show($id) {
-        $produto = Produtos::find($id);
+        $produto = Produtos::with('mostrarComentarios')->find($id);
+        //$produto = Produtos::find($id);
         // echo "<pre>";
         // print_r($produto);
         // echo "</pre>";
