@@ -45,6 +45,12 @@
             @endif
             <h4 class="text-center">
                 <a href="{{URL::to('produtos')}}/{{$produto->id}}">{{$produto->titulo}}</a>
+                @if($produto->preco == $maiscaro)
+                <span class="badge badge-danger">Maior preço</span>
+                @endif
+                @if($produto->preco == $maisbarato)
+                <span class="badge badge-success">Menor preço</span>
+                @endif
             </h4>
             <p class="text-center">R$ {{number_format($produto->preco, 2, ',', '.')}}</p>
             @if(Auth::check())
@@ -59,6 +65,12 @@
             @endif
         </div>
         @endforeach
+    </div>
+    <div>
+        <p><strong>O valor médio dos produtos é: </strong>R$ {{number_format($mediavalor, 2, ',', '.')}}</p>
+        <p><strong>O valor total dos produtos é: </strong>R$ {{number_format($somavalor, 2, ',', '.')}}</p>
+        <p><strong>O quantidade total dos produtos é: </strong>{{ $contagemP }}</p>
+        <p><strong>A quantidade de produtos maior que R$ 10,00 é: </strong>{{ $maiorDezP }}</p>
     </div>
     {{ $produtos->links() }}
 @endsection
