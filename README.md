@@ -14,11 +14,11 @@ Conheça [Laravel](https://laravel.com).
 
 | INSERÇÃO | EDIÇÃO |
 | --- | --- |
-| <img src="https://uploaddeimagens.com.br/images/001/946/018/original/2.PNG" width="300" height="200" /> | <img src="https://uploaddeimagens.com.br/images/001/946/041/original/5.PNG" width="300" height="200" />
+| <img src="https://uploaddeimagens.com.br/images/001/946/018/original/2.PNG" width="600" height="400" /> | <img src="https://uploaddeimagens.com.br/images/001/946/041/original/5.PNG" width="600" height="400" />
 
 | VISUALIZAÇÃO | CONTATO |
 | --- | --- |
-|<img src="https://uploaddeimagens.com.br/images/001/946/019/original/3.PNG" width="300" height="200" /> | <img src="https://uploaddeimagens.com.br/images/001/946/020/original/4.PNG" width="300" height="200" />
+|<img src="https://uploaddeimagens.com.br/images/001/946/019/original/3.PNG" width="600" height="400" /> | <img src="https://uploaddeimagens.com.br/images/001/946/020/original/4.PNG" width="600" height="400" />
 
 ## Start project
 
