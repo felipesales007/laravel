@@ -14,7 +14,7 @@ Conheça [Laravel](https://laravel.com).
 
 | INSERÇÃO | EDIÇÃO |
 | --- | --- |
-| <img src="https://uploaddeimagens.com.br/images/001/946/018/original/2.PNG" width="500" height="250" /> | <img src="https://uploaddeimagens.com.br/images/001/946/041/original/5.PNG" width="500" height="250" />
+| <img src="https://uploaddeimagens.com.br/images/001/946/018/original/2.PNG" width="450" height="250" /> | <img src="https://uploaddeimagens.com.br/images/001/946/041/original/5.PNG" width="450" height="250" />
 
 | VISUALIZAÇÃO | CONTATO |
 | --- | --- |
