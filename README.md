@@ -12,9 +12,9 @@ Conheça [Laravel](https://laravel.com).
 
 [<img src="http://www.wallacesilva.com/blog/wp-content/uploads/2015/01/laravel-1.png" width="100" height="100" />](https://laravel.com)
 
-| INSERÇÃO | EDIÇÃO | EDIÇÃO |
-| --- | --- | --- |
-| <img src="https://uploaddeimagens.com.br/images/001/946/018/original/2.PNG" width="600" height="250" /> | <img src="https://uploaddeimagens.com.br/images/001/946/041/original/5.PNG" width="600" height="250" /> | <img src="https://uploaddeimagens.com.br/images/001/946/041/original/5.PNG" width="600" height="250" />
+| INSERÇÃO | EDIÇÃO |
+| --- | --- |
+| <img src="https://uploaddeimagens.com.br/images/001/946/018/original/2.PNG" width="600" height="250" /> | <img src="https://uploaddeimagens.com.br/images/001/946/041/original/5.PNG" width="600" height="250" />
 
 | VISUALIZAÇÃO | CONTATO |
 | --- | --- |
