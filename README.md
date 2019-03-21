@@ -12,6 +12,8 @@ Conheça [Laravel](https://laravel.com).
 
 [<img src="http://www.wallacesilva.com/blog/wp-content/uploads/2015/01/laravel-1.png" width="100" height="100" />](https://laravel.com)
 
+## Mais telas
+
 | INSERÇÃO | EDIÇÃO |
 | --- | --- |
 | <img src="https://uploaddeimagens.com.br/images/001/946/018/original/2.PNG" width="450" height="250" /> | <img src="https://uploaddeimagens.com.br/images/001/946/041/original/5.PNG" width="450" height="250" />
@@ -30,6 +32,7 @@ Recomendação para execução do projeto
 - Executa no cmd do projeto `php artisan migrate` par migração do banco
 
 ## Documentação
+
 A documentação do Laravel está disponível  [website](https://laravel.com/docs/).
 
 ## Suporte nos navegadores
